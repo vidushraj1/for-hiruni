@@ -408,3 +408,15 @@
   color: #C9953A;
   animation: glow-pulse 2.5s ease-in-out infinite alternate;
 }
+
+.celebration-tease {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.celebration-tease-fade {
+  opacity: 0.15;
+}
