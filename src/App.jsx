@@ -42,14 +42,14 @@ function App() {
   const [showCelebration, setShowCelebration] = useState(false);
   const { track } = useEmailTracker();
 
-  useEffect(() => {
-    try {
-      emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
-    } catch (_) {
-      // Silent
-    }
-    track('opened your letter 💌', 'Hiruni opened your apology website', 'Page 1 — Hero');
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
+  //   } catch (_) {
+  //     // Silent
+  //   }
+  //   track('opened your letter 💌', 'Hiruni opened your apology website', 'Page 1 — Hero');
+  // }, []);
 
   // Escape key dismisses celebration overlay
   useEffect(() => {

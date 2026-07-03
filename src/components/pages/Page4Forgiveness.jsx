@@ -14,9 +14,9 @@ export default function Page4Forgiveness({ onYes, track }) {
   const [noIndex, setNoIndex] = useState(0);
   const attemptRef = useRef(0);
 
-  useEffect(() => {
-    track('reached the question 🤍', 'She is now at the forgiveness question', 'Page 4 — Forgiveness');
-  }, []);
+  // useEffect(() => {
+  //   track('reached the question 🤍', 'She is now at the forgiveness question', 'Page 4 — Forgiveness');
+  // }, []);
 
   const dodge = () => {
     attemptRef.current += 1;
