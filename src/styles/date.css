@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+.date-app-shell {
+  /* Sky Light Blue to Soft Pink Gradient */
+  background: linear-gradient(135deg, #e0f2fe 0%, #fce4ec 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.date-content-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 420px;
+}
+
+.date-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: dateFadeIn 0.6s ease-out;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 36px 24px;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(181, 24, 78, 0.08);
+  width: 100%;
+}
+
+@keyframes dateFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.date-gif {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(181, 24, 78, 0.15);
+  background-color: #fce4ec; 
+}
+
+/* Typography matching Apology */
+.date-title { 
+  font-family: 'Dancing Script', cursive; 
+  font-size: clamp(28px, 8vw, 36px); 
+  color: #B5184E; 
+  margin-bottom: 12px; 
+}
+
+.date-subtext { 
+  font-family: 'Lato', sans-serif; 
+  font-size: 14px; 
+  color: #E05590; 
+  margin-bottom: 24px; 
+  font-style: italic;
+}
+
+/* ── BUTTONS (Exactly like Forgiveness page) ── */
+.date-btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.date-btn-yes {
+  background: #B5184E;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  padding: 16px 52px;
+  border-radius: 60px;
+  border: none;
+  box-shadow: 0 8px 28px rgba(181, 24, 78, 0.30);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 48px;
+  width: 100%;
+  max-width: 280px;
+}
+.date-btn-yes:hover, .date-btn-yes:active {
+  transform: scale(1.07);
+  box-shadow: 0 12px 38px rgba(181, 24, 78, 0.42);
+}
+
+.date-btn-no {
+  background: transparent;
+  border: 1.5px solid #E05590;
+  color: #E05590;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 14px 36px;
+  border-radius: 60px;
+  cursor: pointer;
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+/* ── FORM ── */
+.form-card { align-items: flex-start; text-align: left; }
+.date-icon { font-size: 44px; align-self: center; margin-bottom: 10px; }
+.date-input-group { width: 100%; margin-bottom: 20px; }
+.date-input-group label { display: block; font-family: 'Lato', sans-serif; font-size: 14px; color: #B5184E; margin-bottom: 8px; font-weight: 600;}
+.date-input-group input, .date-input-group select {
+  width: 100%; padding: 14px; border-radius: 12px; border: 1.5px solid #fce4ec; font-family: 'Lato', sans-serif; font-size: 15px; outline: none; background: #fff; color: #4A0020;
+}
+.date-input-group input:focus, .date-input-group select:focus { border-color: #B5184E; }
+
+/* ── FOOD GRID ── */
+.date-food-grid { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 12px; 
+  margin-top: 15px; 
+  width: 100%; 
+}
+.date-food-btn {
+  background-color: white; border: 2px solid #fce4ec; display: flex; flex-direction: column; align-items: center; padding: 16px; border-radius: 16px; box-shadow: 0 4px 12px rgba(181, 24, 78, 0.05); cursor: pointer; transition: 0.2s;
+}
+.date-food-btn:hover { border-color: #B5184E; transform: translateY(-4px); }
+.date-food-emoji { font-size: 32px; margin-bottom: 8px; }
+.date-food-name { font-size: 14px; color: #B5184E; font-family: 'Lato', sans-serif; font-weight: 600; }
+
+.date-ps-text { font-family: 'Lato', sans-serif; font-size: 12px; color: #C2185B; margin-top: 24px; font-style: italic; }
+
+/* ── CUSTOM FOOD INPUT ── */
+.custom-food-container {
+  width: 100%;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.custom-food-container label {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #B5184E;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.custom-food-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.custom-food-form input {
+  flex-grow: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1.5px solid #fce4ec;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  color: #4A0020;
+}
+
+.custom-food-form input:focus {
+  border-color: #B5184E;
+}
+
+.custom-submit-btn {
+  width: auto;
+  min-height: auto;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  max-width: none;
+}
+
+/* ── WIDER GIF FOR FINAL PAGE ── */
+.date-gif-wide {
+  width: 100%;
+  max-width: 280px; /* Makes it much wider than the original 150px */
+  height: auto;     /* Keeps natural proportions so text inside the GIF doesn't crop */
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(181, 24, 78, 0.15);
+  background-color: transparent; 
+}
+
+/* ── TEASE TEXT ── */
+.date-tease-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  color: #E05590;
+  margin-top: 36px;
+  font-style: italic;
+  opacity: 0.5;
+  animation: pulseTease 3s infinite alternate;
+}
+
+/* Subtle glowing pulse animation for the hint */
+@keyframes pulseTease {
+  0% { 
+    opacity: 0.4; 
+    transform: scale(1); 
+  }
+  100% { 
+    opacity: 0.85; 
+    transform: scale(1.02); 
+    text-shadow: 0 0 8px rgba(224, 85, 144, 0.3);
+  }
+}
